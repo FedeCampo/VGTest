@@ -1,0 +1,68 @@
+@import "../../assets/styles/colors";
+@import "../../assets/styles/borders";
+@import "../../assets/styles/spacings";
+@import "../../assets/styles/typography";
+.tabActive {
+  border-bottom: 2px solid $light-blue;
+}
+
+.link_nowrap {
+  cursor: pointer;
+  white-space: nowrap;
+  &:hover {
+    color: $light-blue;
+  }
+}
+
+.tab {
+  border-bottom: none;
+}
+.link_container {
+  position: relative;
+  width: 100%;
+  .link_parent {
+    cursor: pointer;
+    white-space: nowrap;
+  }
+}
+
+.header {
+  background: white;
+  width: 100%;
+  padding: $spacer-36;
+  color: $blue;
+  transition: 0.3s ease all;
+
+  &__content {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    .logo {
+      cursor: pointer;
+    }
+
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      ul {
+        list-style: none;
+        display: flex;
+        margin-right: $spacer-24;
+        li {
+          margin-right: $spacer-14;
+
+          a {
+            color: $blue;
+            padding: $spacer-14 $spacer-20;
+            border-radius: $border-radius-xl;
+            transition: 0.3s ease all;
+          }
+        }
+      }
+    }
+  }
+}

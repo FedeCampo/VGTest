@@ -1,0 +1,467 @@
+@import "../../assets/styles/borders";
+@import "../../assets/styles/colors";
+@import "../../assets/styles/spacings";
+@import "../../assets/styles/typography";
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&family=Montserrat:wght@400;600;700&display=swap");
+
+.button {
+  cursor: pointer;
+  border-width: $spacer-1;
+  border-style: solid;
+  border-radius: $border-radius-xxxxl;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out,
+    border-color 200ms ease-in-out;
+  font-family: "Montserrat", sans-serif;
+
+  &.sm {
+    height: $spacer-18;
+    font-size: $font-size-16;
+    padding: $spacer-24 $spacer-24;
+    font-weight: bold;
+  }
+
+  &.md {
+    height: $spacer-40;
+    padding: $spacer-8 $spacer-16;
+    font-size: $font-size-14;
+  }
+
+  &.lg {
+    height: $spacer-48;
+    padding: $spacer-8 $spacer-16;
+    font-size: $font-size-14;
+    font-weight: bold;
+    border-width: $spacer-2;
+  }
+
+  &.xl {
+    height: $spacer-64;
+    padding: $spacer-16 $spacer-20;
+    font-size: $font-size-20;
+    font-weight: bold;
+    border-width: $spacer-2;
+  }
+
+  &.default {
+    border-color: $primary-blue;
+    background-color: $white;
+    color: $primary-blue;
+
+    &:hover:not(:disabled) {
+      background-color: darken($white, 10%);
+    }
+
+    &:focus:not(:disabled) {
+      border-color: darken($primary-blue, 10%);
+      background-color: darken($primary-blue, 10%);
+      color: $white;
+    }
+
+    &.active {
+      border-color: $primary-blue;
+      background-color: $primary-blue;
+      color: $white;
+    }
+  }
+
+  &.primary {
+    border-color: $light-blue;
+    background-color: $light-blue;
+    color: $white;
+
+    &:hover:not(:disabled) {
+      border-color: $light-blue;
+      background-color: $light-blue;
+    }
+
+    &:focus:not(:disabled) {
+      border-color: $light-blue;
+      background-color: $light-blue;
+    }
+    &:active:not(:disabled) {
+      border-color: $light-blue;
+      background-color: $light-blue;
+    }
+
+    &.outline {
+      border-color: $light-blue;
+      background-color: transparent;
+      color: $light-blue;
+
+      &:hover:not(:disabled) {
+        border-color: $light-blue;
+        background-color: transparent;
+        color: $light-blue;
+      }
+
+      &:focus:not(:disabled) {
+        border-color: $light-blue;
+        background-color: transparent;
+        color: $light-blue;
+      }
+      &:active:not(:disabled) {
+        border-color: $-bright-blue;
+        background-color: transparent;
+        color: $-bright-blue;
+      }
+      &.active {
+        border-color: $light-blue;
+        background-color: $light-blue;
+        color: $white;
+      }
+    }
+
+    &.inverted {
+      border-color: $white;
+      background-color: $white;
+      color: $light-blue;
+
+      &:hover:not(:disabled) {
+        border-color: lighten($white, 10%);
+        background-color: lighten($white, 10%);
+      }
+
+      &:focus:not(:disabled) {
+        border-color: darken($white, 10%);
+        background-color: darken($white, 10%);
+      }
+    }
+
+    &.darkBackground {
+      border-color: $white;
+      background-color: $white;
+      color: $light-blue;
+
+      &:hover:not(:disabled) {
+        border-color: $-bright-blue;
+        background-color: $-bright-blue;
+        color: $white;
+      }
+
+      &:focus:not(:disabled) {
+        border-color: $-bright-blue;
+        background-color: $-bright-blue;
+        color: $white;
+      }
+    }
+
+    &.lightBackground {
+      border-color: $white;
+      background-color: $white;
+      color: $light-blue;
+
+      &:hover:not(:disabled) {
+        border-color: $light-blue;
+        background-color: $light-blue;
+        color: $white;
+      }
+
+      &:focus:not(:disabled) {
+        border-color: $light-blue;
+        background-color: $light-blue;
+        color: $white;
+      }
+    }
+  }
+
+  &.secondary {
+    border-color: white;
+    background-color: transparent;
+    color: white;
+
+    &:hover:not(:disabled) {
+      border-color: lighten(white, 10%);
+    }
+
+    &:focus:not(:disabled) {
+      border-color: darken(white, 10%);
+    }
+
+    &.outline {
+      border-color: $-grey-middle;
+      background-color: transparent;
+      color: $-grey-middle;
+
+      &:hover:not(:disabled) {
+        border-color: lighten($-grey-middle, 10%);
+        background-color: transparent;
+        color: lighten($-grey-middle, 10%);
+      }
+
+      &:focus:not(:disabled) {
+        border-color: darken($-grey-middle, 10%);
+        background-color: darken($-grey-middle, 10%);
+        color: $white;
+      }
+
+      &.active {
+        border-color: $-grey-middle;
+        background-color: $-grey-middle;
+        color: $white;
+      }
+    }
+
+    &.inverted {
+      border-color: $white;
+      background-color: $white;
+      color: $-grey-middle;
+
+      &:hover:not(:disabled) {
+        border-color: lighten($white, 10%);
+        background-color: lighten($white, 10%);
+      }
+
+      &:focus:not(:disabled) {
+        border-color: darken($white, 10%);
+        background-color: darken($white, 10%);
+      }
+    }
+  }
+
+  &.danger {
+    border-color: $-danger;
+    background-color: $-danger;
+    color: $white;
+
+    &:hover:not(:disabled) {
+      border-color: lighten($-danger, 10%);
+      background-color: lighten($-danger, 10%);
+    }
+
+    &:focus:not(:disabled) {
+      border-color: darken($-danger, 10%);
+      background-color: darken($-danger, 10%);
+    }
+
+    &.outline {
+      border-color: $-danger;
+      background-color: transparent;
+      color: $-danger;
+
+      &:hover:not(:disabled) {
+        border-color: lighten($-danger, 10%);
+        background-color: transparent;
+        color: lighten($-danger, 10%);
+      }
+
+      &:focus:not(:disabled) {
+        border-color: darken($-danger, 10%);
+        background-color: darken($-danger, 10%);
+        color: $white;
+      }
+
+      &.active {
+        border-color: $-danger;
+        background-color: $-danger;
+        color: $white;
+      }
+    }
+
+    &.inverted {
+      border-color: $white;
+      background-color: $white;
+      color: $-danger;
+
+      &:hover:not(:disabled) {
+        border-color: lighten($white, 10%);
+        background-color: lighten($white, 10%);
+      }
+
+      &:focus:not(:disabled) {
+        border-color: darken($white, 10%);
+        background-color: darken($white, 10%);
+      }
+    }
+  }
+
+  &.warning {
+    border-color: $-warning;
+    background-color: $-warning;
+    color: $mine-shaft;
+
+    &:hover:not(:disabled) {
+      border-color: lighten($-warning, 10%);
+      background-color: lighten($-warning, 10%);
+    }
+
+    &:focus:not(:disabled) {
+      border-color: darken($-warning, 10%);
+      background-color: darken($-warning, 10%);
+    }
+
+    &.outline {
+      border-color: $-warning;
+      background-color: transparent;
+      color: $-warning;
+
+      &:hover:not(:disabled) {
+        border-color: lighten($-warning, 10%);
+        background-color: transparent;
+        color: lighten($-warning, 10%);
+      }
+
+      &:focus:not(:disabled) {
+        border-color: darken($-warning, 10%);
+        background-color: darken($-warning, 10%);
+        color: $white;
+      }
+
+      &.active {
+        border-color: $-warning;
+        background-color: $-warning;
+        color: $white;
+      }
+    }
+
+    &.inverted {
+      border-color: $white;
+      background-color: $white;
+      color: $-warning;
+
+      &:hover:not(:disabled) {
+        border-color: lighten($white, 10%);
+        background-color: lighten($white, 10%);
+      }
+
+      &:focus:not(:disabled) {
+        border-color: darken($white, 10%);
+        background-color: darken($white, 10%);
+      }
+    }
+  }
+
+  &.info {
+    border-color: $-info;
+    background-color: $-info;
+    color: $white;
+
+    &:hover:not(:disabled) {
+      border-color: lighten($-info, 10%);
+      background-color: lighten($-info, 10%);
+    }
+
+    &:focus:not(:disabled) {
+      border-color: darken($-info, 10%);
+      background-color: darken($-info, 10%);
+    }
+
+    &.outline {
+      border-color: $-info;
+      background-color: transparent;
+      color: $-info;
+
+      &:hover:not(:disabled) {
+        border-color: lighten($-info, 10%);
+        background-color: transparent;
+        color: lighten($-info, 10%);
+      }
+
+      &:focus:not(:disabled) {
+        border-color: darken($-info, 10%);
+        background-color: darken($-info, 10%);
+        color: $white;
+      }
+
+      &.active {
+        border-color: $-info;
+        background-color: $-info;
+        color: $white;
+      }
+    }
+
+    &.inverted {
+      border-color: $white;
+      background-color: $white;
+      color: $-info;
+
+      &:hover:not(:disabled) {
+        border-color: lighten($white, 10%);
+        background-color: lighten($white, 10%);
+      }
+
+      &:focus:not(:disabled) {
+        border-color: darken($white, 10%);
+        background-color: darken($white, 10%);
+      }
+    }
+  }
+
+  &.orange {
+    border-color: $-orange;
+    background-color: $-orange;
+    color: $mine-shaft;
+
+    &:hover:not(:disabled) {
+      border-color: lighten($-orange, 10%);
+      background-color: lighten($-orange, 10%);
+    }
+
+    &:focus:not(:disabled) {
+      border-color: darken($-orange, 10%);
+      background-color: darken($-orange, 10%);
+    }
+
+    &.outline {
+      border-color: $-orange;
+      background-color: transparent;
+      color: $-orange;
+
+      &:hover:not(:disabled) {
+        border-color: lighten($-orange, 10%);
+        background-color: transparent;
+        color: lighten($-orange, 10%);
+      }
+
+      &:focus:not(:disabled) {
+        border-color: darken($-orange, 10%);
+        background-color: darken($-orange, 10%);
+        color: $mine-shaft;
+      }
+
+      &.active {
+        border-color: $-orange;
+        background-color: $-orange;
+        color: $mine-shaft;
+      }
+    }
+
+    &.inverted {
+      border-color: $white;
+      background-color: $white;
+      color: $-orange;
+
+      &:hover:not(:disabled) {
+        border-color: lighten($white, 10%);
+        background-color: lighten($white, 10%);
+      }
+
+      &:focus:not(:disabled) {
+        border-color: darken($white, 10%);
+        background-color: darken($white, 10%);
+      }
+    }
+  }
+
+  &.link {
+    border-color: transparent;
+    background-color: transparent;
+    color: $primary-blue-90;
+
+    &:hover:not(:disabled) {
+      color: lighten($primary-blue-90, 10%);
+    }
+
+    &:focus:not(:disabled) {
+      color: darken($primary-blue-90, 10%);
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

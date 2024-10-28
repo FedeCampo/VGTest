@@ -1,0 +1,22 @@
+@import "../../../assets/styles/colors";
+@import "../../../assets/styles/borders";
+@import "../../../assets/styles/spacings";
+@import "../../../assets/styles/typography";
+@import "../../../assets/styles/shadows";
+.container {
+  background: white;
+  z-index: 3;
+  box-shadow: $-shadow-l;
+  padding: $spacer-20 $spacer-12;
+  position: absolute;
+  border-radius: $spacer-10;
+
+  .link {
+    padding: $spacer-8;
+    cursor: pointer;
+    white-space: nowrap;
+    &:hover {
+      color: $light-blue;
+    }
+  }
+}
