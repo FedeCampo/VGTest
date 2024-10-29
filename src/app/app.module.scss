@@ -1,16 +1,4 @@
-@import "../assets/styles/spacings";
-@import "../assets/styles/colors";
-@import "../assets/styles/borders";
-@import "../assets/styles/typography";
-.app {
-  @media (-webkit-device-pixel-ratio: 1.25) {
-    * {
-      zoom: 0.8;
-    }
-  }
-
-  .container {
-    height: 100%;
-    background: $white;
-  }
+.container {
+  height: 100%;
+  background: $white;
 }
